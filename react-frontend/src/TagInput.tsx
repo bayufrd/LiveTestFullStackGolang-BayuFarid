@@ -1,5 +1,6 @@
 import React, { KeyboardEvent, useState } from 'react';
 import './App.css';
+import TagItem from './TagItem';
 
 function TagInput() {
   const [inputValue, setInputValue] = useState<string>('');
@@ -50,19 +51,7 @@ function TagInput() {
         {tags.length === 0 ? (
           <p className="tag-list-empty">No tags added yet.</p>
         ) : (
-          tags.map((tag) => (
-            <span className="tag-pill" key={tag}>
-              <span>{tag}</span>
-              <button
-                type="button"
-                className="tag-remove-button"
-                onClick={() => handleRemoveTag(tag)}
-                aria-label={`Remove ${tag}`}
-              >
-                ×
-              </button>
-            </span>
-          ))
+          tags.map((tag) => <TagItem key={tag} tag={tag} onRemove={handleRemoveTag} />)
         )}
       </div>
 
