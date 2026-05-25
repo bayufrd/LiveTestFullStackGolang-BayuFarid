@@ -1,0 +1,122 @@
+{
+  "info": {
+    "name": "Go Backend Live Test API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Price With Tax",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"product\": {\n    \"name\": \"Laptop\",\n    \"price\": 1200\n  },\n  \"taxRate\": 0.07\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/product/price-with-tax",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "product",
+            "price-with-tax"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Calculate Average",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"numbers\": [10, 20, 30, 40]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/average",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "average"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Calculate Average Empty Slice",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"numbers\": []\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/average",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "average"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Inventory",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/inventory",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "inventory"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ]
+}
