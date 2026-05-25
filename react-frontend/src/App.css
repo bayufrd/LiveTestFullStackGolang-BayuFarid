@@ -1,0 +1,137 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.tag-input-card {
+  width: min(100%, 640px);
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.2);
+}
+
+.tag-input-header {
+  margin-bottom: 24px;
+}
+
+.tag-input-eyebrow {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tag-input-header h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 2rem;
+}
+
+.tag-input-description {
+  margin: 12px 0 0;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.tag-list {
+  min-height: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  background: #f8fafc;
+}
+
+.tag-list-empty {
+  margin: 0;
+  color: #64748b;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.tag-remove-button {
+  border: none;
+  border-radius: 999px;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #bfdbfe;
+  color: #1d4ed8;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.tag-remove-button:hover {
+  background: #93c5fd;
+  transform: scale(1.05);
+}
+
+.tag-remove-button:active {
+  transform: scale(0.97);
+}
+
+.tag-input-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.tag-input-field {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  color: #0f172a;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tag-input-field:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.tag-input-error {
+  margin: 12px 0 0;
+  color: #dc2626;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .tag-input-card {
+    padding: 24px;
+  }
+
+  .tag-input-header h1 {
+    font-size: 1.75rem;
+  }
+}
